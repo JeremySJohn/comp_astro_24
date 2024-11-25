@@ -79,6 +79,24 @@ params2.w = 109.0                                            #longitude of peria
 params2.u = [c1_avg, c2_avg]                                 #limb darkening coefficients [u1, u2]
 params2.limb_dark = "quadratic"                              #limb darkening model
 
+
+#######################################################################################################################   
+###FROM HERE STARTS THE ASSSIGNMENT 2 PART C CREATING A THIRD MODEL OF THE SAME PLANET BUT WITH A RADIUS OF TWICE###
+#######################################################################################################################
+
+#Define the parameters for the third plot of the transit model. This is the same planet but with different radius
+params3 = batman.TransitParams()
+params3.t0 = 0.                                              #time of inferior conjunction
+params3.per = 2.8758916                                      #orbital period in days
+params3.rp = planet_radius(radius_planet*2)                  #planet radius NOTICE THE INPUT ITS THE ACTUAL RADIUS BY 2 (in units of stellar radii)
+params3.a = semi_major_axis                                  #semi-major axis (in units of stellar radii)
+params3.inc = 84.1                                           #orbital inclination (in degrees)
+params3.ecc = 0.013                                          #eccentricity
+params3.w = 109.0                                            #longitude of periastron (in degrees)
+params3.u = [c1_avg, c2_avg]                                 #limb darkening coefficients [u1, u2]
+params3.limb_dark = "quadratic"                              #limb darkening model
+
+
 #Time array to calculate the transit model
 t = np.linspace(-0.05 , 0.05 , 1000)
 
@@ -90,9 +108,14 @@ flux1 = m1.light_curve(params1)                              # calculates light 
 m2 = batman.TransitModel(params2, t)                         # initializes model for the second parameters
 flux2 = m2.light_curve(params2)                              # calculates the second light curve
 
+# Initialize the transit model and calculate the model light curve for the second plot
+m3 = batman.TransitModel(params3, t)                         # initializes model for the second parameters
+flux3 = m2.light_curve(params3)                              # calculates the second light curve
+
 # Show the light curves
-plt.plot(t, flux1, color='blue', label='Light Curve for R')       # Plot the first light curve
-plt.plot(t, flux2, color='red', label='Light Curve for R/2')  # Plot the second light curve
+plt.plot(t, flux1, color='blue', label='Light Curve for R')             # Plot the first light curve
+plt.plot(t, flux2, color='red', label='Light Curve for R/2')            # Plot the second light curve
+plt.plot(t, flux3, color='green', label='Light Curve for R*2')          # Plot the third light curve
 plt.xlabel("Time from central transit [days]")
 plt.ylabel("Relative flux")
 plt.title("HD 149026 b Light Curve")                                    # Add title

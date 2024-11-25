@@ -21,8 +21,8 @@ c1_avg = df['c1'].mean()
 c2_avg = df['c2'].mean()
 
 # Print the averages of c1 and c2
-print(f'Average of c1: {c1_avg}')
-print(f'Average of c2: {c2_avg}')
+#print(f'Average of c1: {c1_avg}')
+#print(f'Average of c2: {c2_avg}')
 
 #Convert the stellar radius of the star in jupiter radius
 def stellar_radius(radius_star):

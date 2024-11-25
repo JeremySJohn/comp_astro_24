@@ -51,31 +51,53 @@ stellar_rad = 1.497                                         #Radius of the star 
 semi_major_axis = AU_to_stellar_radius(0.041)               #Semi-major axis of the planet in units of stellar radii
 
 #Define the parameters of the transit model using the planet TOI-2145b selected from the Exoplanet catalog
-params = batman.TransitParams()
-params.t0 = 0.                                              #time of inferior conjunction
-params.per = 2.8758916                                      #orbital period in days
-params.rp = planet_radius(radius_planet)                    #planet radius (in units of stellar radii)
-params.a = semi_major_axis                                  #semi-major axis (in units of stellar radii)
-params.inc = 84.1                                           #orbital inclination (in degrees)
-params.ecc = 0.013                                          #eccentricity
-params.w = 109.0                                            #longitude of periastron (in degrees)
-params.u = [c1_avg, c2_avg]                                 #limb darkening coefficients [u1, u2]
-params.limb_dark = "quadratic"                              #limb darkening model
+params1 = batman.TransitParams()
+params1.t0 = 0.                                              #time of inferior conjunction
+params1.per = 2.8758916                                      #orbital period in days
+params1.rp = planet_radius(radius_planet)                    #planet radius (in units of stellar radii)
+params1.a = semi_major_axis                                  #semi-major axis (in units of stellar radii)
+params1.inc = 84.1                                           #orbital inclination (in degrees)
+params1.ecc = 0.013                                          #eccentricity
+params1.w = 109.0                                            #longitude of periastron (in degrees)
+params1.u = [c1_avg, c2_avg]                                 #limb darkening coefficients [u1, u2]
+params1.limb_dark = "quadratic"                              #limb darkening model
+
+
+#######################################################################################################################   
+###FROM HERE STARTS THE ASSSIGNMENT 2 PART B CREATING A SECOND PLOT WITH THE SAME PLANET BUT WITH A RADIUS OF HALF###
+#######################################################################################################################
+
+#Define the parameters for the second plot of the transit model. This is the same planet but with different radius
+params2 = batman.TransitParams()
+params2.t0 = 0.                                              #time of inferior conjunction
+params2.per = 2.8758916                                      #orbital period in days
+params2.rp = planet_radius(radius_planet/2)                  #planet radius NOTICE THE INPUT ITS THE ACTUAL RADIUS BUT DIVIDED BY 2 (in units of stellar radii)
+params2.a = semi_major_axis                                  #semi-major axis (in units of stellar radii)
+params2.inc = 84.1                                           #orbital inclination (in degrees)
+params2.ecc = 0.013                                          #eccentricity
+params2.w = 109.0                                            #longitude of periastron (in degrees)
+params2.u = [c1_avg, c2_avg]                                 #limb darkening coefficients [u1, u2]
+params2.limb_dark = "quadratic"                              #limb darkening model
 
 #Time array to calculate the transit model
 t = np.linspace(-0.05 , 0.05 , 1000)
 
-#Initialize the transit model and calculate the model light curve
-m = batman.TransitModel(params, t)                          #initializes model
-flux = m.light_curve(params)                                #calculates light curve
+# Initialize the transit model and calculate the model light curve for the first plot
+m1 = batman.TransitModel(params1, t)                         # initializes model
+flux1 = m1.light_curve(params1)                              # calculates light curve
 
-#Show the light curves
-plt.plot(t, flux, color='blue')                             # Plot the model
-plt.legend("HD 149026 b")                                   # Add legend
-plt.xlabel("Time from central transit [days] ")
+# Initialize the transit model and calculate the model light curve for the second plot
+m2 = batman.TransitModel(params2, t)                         # initializes model for the second parameters
+flux2 = m2.light_curve(params2)                              # calculates the second light curve
+
+# Show the light curves
+plt.plot(t, flux1, color='blue', label='Light Curve for R')       # Plot the first light curve
+plt.plot(t, flux2, color='red', label='Light Curve for R/2')  # Plot the second light curve
+plt.xlabel("Time from central transit [days]")
 plt.ylabel("Relative flux")
-plt.title("HD 149026 b Light Curve")                        # Add title
-plt.grid(True)                                              # Add grid
+plt.title("HD 149026 b Light Curve")                                    # Add title
+plt.grid(True)                                                          # Add grid
+plt.legend(loc='upper right')                                           # Add legend in the upper right corner
 plt.show()
 
 

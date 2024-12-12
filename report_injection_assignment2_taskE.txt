@@ -1,0 +1,91 @@
+LINEAR KERNEL
+
+Train Set Error 0.48830351877334377
+Dev Set Error 0.5403508771929825
+------------
+Precision - Train Set 0.5609046849757674
+Precision - Dev Set 0.7
+------------
+Recall - Train Set 0.6067808458580916
+Recall - Dev Set 0.04430379746835443
+------------
+Confusion Matrix - Train Set
+[[ 867 1359]
+ [1125 1736]]
+Confusion Matrix - Dev Set
+[[248   6]
+ [302  14]]
+------------
+ 
+ 
+------------
+classification_report_train
+              precision    recall  f1-score   support
+
+       False       0.44      0.39      0.41      2226
+...
+    accuracy                           0.46       570
+   macro avg       0.58      0.51      0.35       570
+weighted avg       0.59      0.46      0.32       570
+
+---------------------------------------------------------------------
+GAUSSIAN KERNEL
+
+Train Set Error 0.4330646746609004
+Dev Set Error 0.44561403508771935
+------------
+Precision - Train Set 0.5653296266878475
+Precision - Dev Set 0.5543859649122806
+------------
+Recall - Train Set 0.9951066060817896
+Recall - Dev Set 1.0
+------------
+Confusion Matrix - Train Set
+[[  37 2189]
+ [  14 2847]]
+Confusion Matrix - Dev Set
+[[  0 254]
+ [  0 316]]
+------------
+ 
+ 
+------------
+classification_report_train
+              precision    recall  f1-score   support
+
+       False       0.73      0.02      0.03      2226
+...
+    accuracy                           0.55       570
+   macro avg       0.28      0.50      0.36       570
+weighted avg       0.31      0.55      0.40       570
+
+----------------------------------------------------------------
+LINEAR KERNEL
+
+Train Set Error 0.4281501867505406
+Dev Set Error 0.4649122807017544
+------------
+Precision - Train Set 0.5691435513261794
+Precision - Dev Set 0.5578231292517006
+------------
+Recall - Train Set 0.9825235931492485
+Recall - Dev Set 0.7784810126582279
+------------
+Confusion Matrix - Train Set
+[[  98 2128]
+ [  50 2811]]
+Confusion Matrix - Dev Set
+[[ 59 195]
+ [ 70 246]]
+------------
+ 
+ 
+------------
+classification_report_train
+              precision    recall  f1-score   support
+
+       False       0.66      0.04      0.08      2226
+...
+    accuracy                           0.54       570
+   macro avg       0.51      0.51      0.48       570
+weighted avg       0.51      0.54      0.50       570

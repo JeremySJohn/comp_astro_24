@@ -43,7 +43,7 @@ model_type = transmission
     [[Rayleigh]]
 
 [Observation]
-observed_spectrum = /Users/tiziano/Library/CloudStorage/GoogleDrive-tiziano.zingales@unipd.it/My Drive/Computational Astrophysics/TauREx/parfiles/quickstart.dat
+observed_spectrum = /Users/Kevin/OneDrive/Documentos/UNIPD/2_year/computational/TauRex/parfiles/quickstart.dat
 
 [Optimizer]
 optimizer = nestle

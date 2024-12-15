@@ -1,5 +1,5 @@
 [Global]
-xsec_path =  
+xsec_path = /Users/Kevin/OneDrive/Documentos/UNIPD/2_year/computational/atmosphere/xsecs
 cia_path = /Users/Kevin/OneDrive/Documentos/UNIPD/2_year/computational/atmosphere/cia/hitran
 
 
@@ -10,7 +10,7 @@ ratio = 0.25
 
     [[H2O]]
     gas_type = constant
-    mix_ratio=1.1185e-4
+    mix_ratio = 1.1185e-4
 
 
 [Temperature]

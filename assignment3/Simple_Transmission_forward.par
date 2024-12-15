@@ -1,6 +1,6 @@
 [Global]
-xsec_path = /Users/tiziano/Library/CloudStorage/GoogleDrive-tiziano.zingales@unipd.it/My Drive/Computational Astrophysics/data/atmosphere/xsecs
-cia_path = /Users/tiziano/Library/CloudStorage/GoogleDrive-tiziano.zingales@unipd.it/My Drive/Computational Astrophysics/data/atmosphere/cia/hitran
+xsec_path =  
+cia_path = /Users/Kevin/OneDrive/Documentos/UNIPD/2_year/computational/atmosphere/cia/hitran
 
 
 [Chemistry]

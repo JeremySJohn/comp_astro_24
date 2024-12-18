@@ -12,6 +12,18 @@ ratio = 0.25
     gas_type = constant
     mix_ratio = 1.1185e-4
 
+    [[CH4]]
+    gas_type = constant
+    mix_ratio = 2.452e-6
+
+    [[CO2]]
+    gas_type = constant
+    mix_ratio = 3.732e-3
+
+    [[CO]]
+    gas_type = constant
+    mix_ratio = 7.463e-3
+
 
 [Temperature]
 profile_type = isothermal
@@ -25,12 +37,12 @@ nlayers = 100
 
 [Planet]
 planet_type = Simple
-planet_mass = 1.0
-planet_radius = 0.999430455828
+planet_mass = 0.38
+planet_radius = 0.74
 
 [Star]
 star_type = blackbody
-temperature = 5800
+temperature = 6147
 
 [Model]
 model_type = transmission

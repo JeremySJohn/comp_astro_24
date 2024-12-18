@@ -1,0 +1,44 @@
+Physical Parameters of the System
+
+=======================================
+Planet
+Name: HD209458b
+Mass: 0.73±0.04 Jupiter Mass
+Radius: 1.39±0.02 Jupiter Radius
+Orbital Period: 3.52474859 days
+Eccentricity: 0.0
+Periapsis: 90.0◦
+The limb darkening coefficients in the light curve modeling they adopted the quadratic limb-darkening law
+t_0(MJD) = 59893.25125 ± 0.00002 (EUREKA !), 59893.25120 ± 0.00003 (SPARTA)
+a/R_* = 8.84 ± 0.02 (EUREKA !),  8.84 ± 0.02 (SPARTA)
+i(◦) = 86.74 ± 0.04 (EUREKA !),  86.74 ± 0.03 (SPARTA)
+
+=======================================
+Star
+Teff = 6026.3549454750±96.8980296914 Rosenthal et al. 2021
+Mass = 1.06917519587500±0.04797361701205 Solar Masses
+Radius = 1.1999759942400±0.0282007051787 Solar Radius
+
+=======================================
+Atmosphere
+In the model they included CH4, CO, CO2, H2O, H2S, NH3, C2H2, HCN, and SO2 as these are the molecules making major contribution,
+within this wavelength range. They removed the data from 3.9 µm to 4.1 µm on WASP-39b’s spectrum that covers the SO2 absorption feature produced by photochemistry.
+The retrieval included the planet radius at 10^5 Pa,
+retrieval setup assumed an isothermal atmosphere with equilibrium chemistry and a “patchy” grey cloud
+deck.temperature, metallicity ([M/H] = log(M/H) - log(M/H)Sun), carbon-to-oxygen (C/O) ratio, cloud-top pressure, and cloud fraction on the day-nightside terminator as free parameters.
+Temperature (100 – 3000K with 100K interval), 
+pressure(10E−4 – 10E8 Pa with decade interval), 
+metallicity(from[M/H] = -1 to [M/H] = 2 with 0.03 interval)
+and
+C/O (0.001 to 2.0^6).
+After retieval, they got C/O = 0.11+0.12−0.06,
+Equilibrium chemistry at T = 1088 K and P = 49 Pa.
+
+The carbon abundance is computed by scaling the solar oxygen abundance with different C/O, and the other elements’ abundances (except H and He) are scaled with metallicity.
+Initialy The best fit model  has T = 982+40−39 K,
+[M/H] = 1.39±0.16,
+C/O = 0.66+0.11−0.25.
+
+By including the volume mixing ratios of CH4, NH3, C2H2, and HCN as free parameters in our retrieval, we provide 3σ upper limits
+of log(χCH4) = -5.6, log(χNH3) = -4.2, log(χC2H2) = -5.7, and log(χHCN) = -5.1.
+The posteriors for the abundances of all four molecules are consistent with the chemical equilibrium prediction from our best-fit model.

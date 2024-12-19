@@ -1,3 +1,5 @@
+#Code for remove the third column from the file Simple_Transmission_retrievalFC.dat and write the output to Simple_Transmission_retrieval.dat
+
 input_file = 'assignment3\Simple_Transmission_retrievalFC.dat'
 output_file = 'assignment3\Simple_Transmission_retrieval.dat'
 

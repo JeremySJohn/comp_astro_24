@@ -22,10 +22,12 @@ Radius = 1.1999759942400±0.0282007051787 Solar Radius
 =======================================
 Atmosphere
 In the model they included CH4, CO, CO2, H2O, H2S, NH3, C2H2, HCN, and SO2 as these are the molecules making major contribution,
-within this wavelength range. They removed the data from 3.9 µm to 4.1 µm on WASP-39b’s spectrum that covers the SO2 absorption feature produced by photochemistry.
+within this wavelength range. 
+They removed the data from 3.9 µm to 4.1 µm on WASP-39b’s spectrum that covers the SO2 absorption feature produced by photochemistry.
 The retrieval included the planet radius at 10^5 Pa,
 retrieval setup assumed an isothermal atmosphere with equilibrium chemistry and a “patchy” grey cloud
-deck.temperature, metallicity ([M/H] = log(M/H) - log(M/H)Sun), carbon-to-oxygen (C/O) ratio, cloud-top pressure, and cloud fraction on the day-nightside terminator as free parameters.
+deck.
+Temperature, metallicity ([M/H] = log(M/H) - log(M/H)Sun), carbon-to-oxygen (C/O) ratio, cloud-top pressure, and cloud fraction on the day-nightside terminator as free parameters.
 Temperature (100 – 3000K with 100K interval), 
 pressure(10E−4 – 10E8 Pa with decade interval), 
 metallicity(from[M/H] = -1 to [M/H] = 2 with 0.03 interval)

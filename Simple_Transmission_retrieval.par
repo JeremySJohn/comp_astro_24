@@ -32,7 +32,7 @@ T = 1300
 [Pressure]
 profile_type = Simple
 atm_min_pressure = 1e-0
-atm_max_pressure = 1e6
+atm_max_pressure = 1e5
 nlayers = 100
 
 [Planet]
@@ -67,16 +67,16 @@ planet_radius:fit = True
 planet_radius:bounds = 0.3, 2
 
 T:fit = True
-T:bounds = 300, 2000
+T:bounds = 100, 3000
 
 H2O:fit = True
-H2O:bounds = 1e-8, 1e-2
+H2O:bounds = 1e-9, 1e-2
 
 CH4:fit = True
-CH4:bounds = 1e-8, 1e-2
+CH4:bounds = 1e-9, 1e-2
 
 CO2:fit = True
-CO2:bounds = 1e-8, 1e-2
+CO2:bounds = 1e-9, 1e-2
 
 CO:fit = True
-CO:bounds =  1e-8, 1e-2
+CO:bounds =  1e-9, 1e-2

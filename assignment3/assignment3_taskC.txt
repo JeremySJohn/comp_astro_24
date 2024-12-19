@@ -1,0 +1,103 @@
+==================================================================================================
+Input Parameters
+==================================================================================================
+
+[Global]
+xsec_path =/Users/Kevin/OneDrive/Documentos/UNIPD/2_year/computational/atmosphere/xsecs
+cia_path = /Users/Kevin/OneDrive/Documentos/UNIPD/2_year/computational/atmosphere/cia/hitran
+
+
+[Chemistry]
+chemistry_type = taurex
+fill_gases = H2,He
+ratio = 0.25
+
+    [[H2O]]
+    gas_type = constant
+    mix_ratio=1.1185e-4
+
+     [[CH4]]
+    gas_type = constant
+    mix_ratio = 2.452e-6
+
+    [[CO2]]
+    gas_type = constant
+    mix_ratio = 3.732e-3
+
+    [[CO]]
+    gas_type = constant
+    mix_ratio = 7.463e-3
+
+
+[Temperature]
+profile_type = isothermal
+T = 1300
+
+[Pressure]
+profile_type = Simple
+atm_min_pressure = 1e-0
+atm_max_pressure = 1e6
+nlayers = 100
+
+[Planet]
+planet_type = Simple
+planet_mass = 0.38
+planet_radius = 0.74
+
+[Star]
+star_type = blackbody
+temperature = 6147
+
+[Model]
+model_type = transmission
+
+    [[Absorption]]
+
+    [[CIA]]
+    cia_pairs = H2-H2, H2-He,
+
+    [[Rayleigh]]
+
+[Observation]
+observed_spectrum = assignment3\HD149026_assignment3_taskA_spectrum.dat
+
+[Optimizer]
+optimizer = nestle
+num_live_points=50
+method = single
+
+[Fitting]
+planet_radius:fit = True
+planet_radius:bounds = 0.3, 2
+
+T:fit = True
+T:bounds = 300, 2000
+
+H2O:fit = True
+H2O:bounds = 1e-8, 1e-2
+
+CH4:fit = True
+CH4:bounds = 1e-8, 1e-2
+
+CO2:fit = True
+CO2:bounds = 1e-8, 1e-2
+
+CO:fit = True
+CO:bounds =  1e-8, 1e-2
+
+=======================================================================================
+Retrieved Parameters
+=======================================================================================
+Rp = 0.74+0.00-0.00
+
+T = 1299.23+3.53-4.14
+
+log(H2O) = -3.95+0.01-0.01
+
+log(CH4) = -5.61+0.04-0.04
+
+log(CO2) = -2.43+0.01-0.02
+
+log(CO) = -2.13+0.03-0.03
+
+mu(derived) = 2.76+0.01-0.01
